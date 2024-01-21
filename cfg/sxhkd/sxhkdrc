@@ -2,7 +2,7 @@
 
 # Browser/File Manager
 super + shift + {w,f,b}
-	{firefox,thunar,brave-bin}
+	{firefox,thunar,brave}
 
 # Open terminal.
 super + Return

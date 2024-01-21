@@ -37,7 +37,7 @@ xset m 0 0
 bspc monitor -d 1 2 3 4 5
 
 rule firefox      desktop=1 follow=on
-rule brave-bin    desktop=1 follow=on
+rule brave        desktop=1 follow=on
 
 rule discord      desktop=2 follow=off
 rule code         desktop=3 
