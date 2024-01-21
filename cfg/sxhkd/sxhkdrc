@@ -6,7 +6,7 @@ super + shift + {w,f,b}
 
 # Open terminal.
 super + Return
-    alacritty -t "term" --embed
+    alacritty
 
 # Open application menu.
 super + d
