@@ -1,0 +1,66 @@
+#!/bin/sh
+
+
+# ENV VARS
+
+export WALLPAPER="$HOME/.config/bspwm/assets/wallpaper.png"
+ 
+# Functions
+# Credits to 6gk/polka
+rule() { bspc rule -a "$@" & }
+config() { bspc config "$@" & }
+start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
+
+# Autostart
+
+# Clear cache.
+rm $HOME/.cache/dunst.log
+rm -r $HOME/.cache/dunst/
+
+"$HOME/.config/polybar/launch"
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+dunst --config $HOME/.config/dunst/dunstrc &
+picom --config $HOME/.config/picom/picom.conf &
+
+# Start polkit agent.
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Setup wallpaper.
+hsetroot -fill "$WALLPAPER"
+
+# I hate mouse drift.
+xset m 0 0
+
+# Window Rules
+
+bspc monitor -d 1 2 3 4 5
+
+rule firefox      desktop=1 follow=on
+rule brave-bin    desktop=1 follow=on
+
+rule discord      desktop=2 follow=off
+rule code         desktop=3 
+rule steam        desktop=3 
+rule kdenlive     desktop=3 
+rule krita        desktop=3 
+
+# General Configuration
+config pointer_modifier             Mod4
+
+config window_gap                   16
+
+config top_padding                  45
+config left_padding                 0
+config right_padding                0
+config bottom_padding               0
+
+config split_ratio                  0.62
+config borderless_monocle           true
+config gapless_monocle              true
+
+# Miscellaneous
+start $HOME/.local/bin/brdr
+
+
+
