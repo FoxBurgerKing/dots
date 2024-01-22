@@ -43,24 +43,20 @@ rule discord      desktop=2 follow=off
 rule code         desktop=3 
 rule steam        desktop=3 
 rule kdenlive     desktop=3 
-rule krita        desktop=3 
 
 # General Configuration
 config pointer_modifier             Mod4
 
+config border_radius 20
+config border_width 3
 config window_gap                   16
-
 config top_padding                  45
-config left_padding                 0
-config right_padding                0
-config bottom_padding               0
 
 config split_ratio                  0.62
 config borderless_monocle           true
 config gapless_monocle              true
+config paddingless_monocle true
+config single_monocle false
 
-# Miscellaneous
-start $HOME/.local/bin/brdr
-
-
+bspc wm --adopt-orphans
 
