@@ -58,5 +58,4 @@ config gapless_monocle              true
 config paddingless_monocle true
 config single_monocle false
 
-bspc wm --adopt-orphans
 
