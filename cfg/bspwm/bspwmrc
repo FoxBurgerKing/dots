@@ -41,8 +41,8 @@ rule brave        desktop=1 follow=on
 
 rule discord      desktop=2 follow=off
 rule code         desktop=3 
-rule steam        desktop=3 
 rule kdenlive     desktop=3 
+rule steam        desktop=4
 
 # General Configuration
 config pointer_modifier             Mod4
