@@ -1,0 +1,91 @@
+@import "../colors.rasi"
+
+
+configuration {
+	font: "DM Sans 10";
+    show-icons: true;
+	display-drun: "Applications";
+    drun-display-format: "{icon} {name}";
+}     
+
+window {
+    background-color: @background-primary;
+    border: 8px;
+    border-color: @border-color;
+    height: 500px;
+}
+
+entry {
+    background-color: @background-primary;
+    margin: 20px 0px 0px 10px;
+    padding: 6px;
+    text-color: @foreground-color;
+}
+inputbar {
+    background-color: @background-primary;
+    border-radius: 5px;
+    children: [prompt, entry];
+    padding: 2px;
+}
+
+listview {
+    background-color: @background-primary;
+    border: 0px 0px 0px;
+    columns: 2;
+    margin: 10px 0px 0px 20px;
+    padding: 6px 0px 0px;
+}
+
+mainbox {
+    background-color: @background-secondary;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+element {
+    background-color: @background-primary;
+    padding: 5px;
+    text-color: @foreground-color;
+}
+
+element-icon {
+    size: 20px;
+}
+
+element selected {
+    background-color: @selected-color;
+    text-color: @primary-accent;
+}
+
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+button {
+    background-color: @background-secondary;
+    horizontal-align: 0.5;
+    padding: 10px;
+    text-color: @primary-accent;
+    vertical-align: 0.5;
+}
+
+button selected {
+    background-color: @background-primary;
+    text-color: @randomcolor;
+}
+
+prompt {
+    background-color: @randomcolor;
+    border-radius: 3px;
+    margin: 20px 0px 0px 20px;
+    padding: 6px;
+    text-color: @background-primary;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}

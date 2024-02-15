@@ -1,0 +1,10 @@
+* {
+   background-primary:        #0E0E0E;
+   background-secondary:      #101010;
+   border-color:              #141515;
+   selected-color:            #FFDEDE; 
+   foreground-color:          #D5CBCC;
+   primary-accent:            #7baac0;
+   secondary-accent:          #7baac0;
+   randomcolor: #FFDEDE; 
+}
